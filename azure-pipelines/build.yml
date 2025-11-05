@@ -36,14 +36,6 @@ stages:
             codeSeverityThreshold: 'high'
             failOnIssues: false
         - task: SnykSecurityScan@1
-          displayName: 'Snyk scanning app'
-          inputs:
-            serviceConnectionEndpoint: 'snyk-integration-eu'
-            testType: 'app'
-            monitorWhen: 'always'
-            severityThreshold: 'high'
-            failOnIssues: false
-        - task: SnykSecurityScan@1
           inputs:
             serviceConnectionEndpoint: 'snyk-integration-eu'
             testType: 'container'
