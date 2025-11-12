@@ -1,8 +1,14 @@
 FROM crofqappdev1.azurecr.io/ofqual/suitecrm-bitnami:latest
 
+# Remove symlinks for custom and themes folders so we can copy files directly into the image
+RUN rm /opt/bitnami/suitecrm/public/legacy/custom && \
+    rm /opt/bitnami/suitecrm/public/legacy/themes && \
+    mkdir -p /opt/bitnami/suitecrm/public/legacy/custom && \
+    mkdir -p /opt/bitnami/suitecrm/public/legacy/themes
+
 # Copy Ofqual extension files into the SuiteCRM extensions directory
 COPY SuiteCRM/extensions/Ofqual /opt/bitnami/suitecrm/extensions/Ofqual
-COPY SuiteCRM/public/legacy/. /opt/bitnami/suitecrm/public/legacy/
+COPY SuiteCRM/public/legacy/custom /opt/bitnami/suitecrm/public/legacy/custom
 
 WORKDIR /opt/bitnami/suitecrm
 
