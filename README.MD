@@ -75,3 +75,7 @@ notifications-grant-type - The notification Grant Type
 This file is purely for local development, you will need to edit the database parameters in teh database environment section to have sensible values (username/password), additionally once set you need to update the SUITECRM_DATABASE_USERNAME and SUITECRM_DATABASE_PASSWORD values to match. Update the SUITECRM_USER and SUITECRM_PASSWORD variables to a sensible username and password, these will be used to logon to the interface with.
 
 The interface will be available at http://localhost:8080 or https://localhost:8443 it uses an automatic self signed certificate so your browser will throw a warning. Please visit https://serversideup.net/open-source/docker-php/docs/deployment-and-production/configuring-ssl for details on configuring an SSL certificate.
+
+## Ofqual Modules
+
+For modules that you want to appear in the Suite UI Menu in the event its needed, ensure the module/bean is named OQ_<something>, there is a script in the startup process that fixes the code installed modules so they are added to the default menu list, it does this by searching all the module names and finding those starting with OQ_ and Adds them via the SuiteCRM standard UpdateSystemTabs function.
