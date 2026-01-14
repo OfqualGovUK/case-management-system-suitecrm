@@ -65,7 +65,8 @@ fi
 /usr/local/bin/php /var/www/html/bin/console scrm:quick-repair-and-rebuild
 /usr/local/bin/php /var/www/html/bin/console scrm:repair-menus
 /usr/local/bin/php /var/www/html/bin/console cache:clear
-
+#Ensure critical data is synced.
+/usr/local/bin/php /var/www/html/bin/console scrm:importer
 # The Quick repair and rebuild, regenerates the config.php, overwriting the file with actual values instead of getenv.
 
 if [ -z "$DEBUG" ]; then

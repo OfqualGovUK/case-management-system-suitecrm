@@ -43,3 +43,5 @@ $app_list_strings['qualification_type_list'] = [
     'Vocationally-Related Qualification' => 'Vocationally-Related Qualification',
     'Other Life Skills Qualification' => 'Other Life Skills Qualification',
 ];
+$app_strings['LBL_EXPORT_WORKFLOWS'] = 'Export Workflows';
+$app_strings['LBL_EXPORT_SURVEYS'] = 'Export Surveys';
