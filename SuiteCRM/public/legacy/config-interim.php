@@ -466,4 +466,25 @@ $sugar_config = array(
   'campaign_emails_per_run_default' => '50',
   'campaign_marketing_emails_per_run_default' => 3,
   'trackers_enabled' => true,
+  'OQImportDir' => 'imports/',
+  'OQImporter' => [
+    'AOW_WorkFlow' => [
+      'DBSync' => true
+    ],
+    'Surveys' => [
+      'DBSync' => true
+    ],
+    'AOW_Conditions' => [
+      'DBSync' => true
+    ],
+    'AOW_Actions' => [
+      'DBSync' => true
+    ],
+    'SurveyQuestions' => [
+      'DBSync' => true
+    ],
+    'SurveyOptions' => [
+      'DBSync' => true
+    ]
+  ]
 );

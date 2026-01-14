@@ -14,6 +14,7 @@ RUN unzip suitecrm-$SUITEVERSION.zip && rm suitecrm-$SUITEVERSION.zip
 COPY --chown=www-data:www-data SuiteCRM/extensions/Ofqual /var/www/html/extensions/Ofqual/ 
 COPY --chown=www-data:www-data SuiteCRM/public/legacy/custom/. /var/www/html/public/legacy/custom
 COPY --chown=www-data:www-data SuiteCRM/public/legacy/modules/. /var/www/html/public/legacy/modules
+COPY --chown=www-data:www-data dataimport /var/www/html/dataimport
 
 COPY scripts/startup.sh /var/www/scripts/startup.sh
 # COPY scripts/99-mountperms.sh /etc/entrypoint.d/99-mountperms.sh
