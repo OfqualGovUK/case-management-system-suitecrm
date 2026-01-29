@@ -1,0 +1,51 @@
+<?php
+
+
+if (!defined('sugarEntry') || !sugarEntry) {
+    die('Not A Valid Entry Point');
+}
+
+$mod_strings = array(
+    'LBL_ASSIGNED_TO_NAME' => 'Assigned to',
+    'LBL_ASSIGNED_TO_ID' => 'Assigned User',
+    'LBL_DATE_ENTERED' => 'Date Created',
+    'LBL_DATE_MODIFIED' => 'Date Modified',
+    'LBL_DESCRIPTION' => 'Description',
+    'LBL_MODULE_NAME' => 'Compliance Conditions',
+    'LBL_MODULE_TITLE' => 'Compliance Conditions',
+    'LBL_MODULE_ID' => 'SOC Conditions Compliance',
+    'LBL_NAME' => 'Compliance Condition Title',
+    'LBL_NEW_FORM_TITLE' => 'New Compliance Condition',
+    'LBL_ASSIGNED_USER_NAME' => 'Assigned to:',
+    'LBL_PERIOD' => 'Period',
+    'LBL_COMPLIANT' => 'Compliant',
+    'LBL_OQ_SOC_CONDITIONSCOMPLIANCE_OFQUAL_CONDITIONS_TITLE' => 'Ofqual Conditions',
+    'LBL_OQ_SOC_CONDITIONSCOMPLIANCE_OFQUAL_CONDITIONS_TITLE_ID ' => 'Ofqual Conditions ID',
+    'LBL_OQ_SOC_CONDITIONSCOMPLIANCE_OQ_SOC_SUBMISSION_TITLE' => 'SOC Submission',
+    'LBL_OQ_SOC_CONDITIONSCOMPLIANCE_OQ_SOC_SUBMISSION_TITLE_ID ' => 'SOC Submission ID',
+    'LBL_OFQUAL_CONDITIONS' => 'Ofqual Conditions',
+    'LBL_HOMEPAGE_TITLE' => 'My Compliance Conditions',
+    'LNK_NEW_RECORD' => 'Add Compliance Condition',
+    'LNK_LIST' => 'View Compliance Conditions',
+    'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Security Groups',
+    'LBL_SECURITYGROUPS' => 'Security Groups',
+    'LBL_ID' => 'ID',
+    'LBL_CREATED' => 'Created By',
+    'LBL_LIST_DATE_CREATED' => 'Date Created',
+    'LBL_LIST_ASSIGNED_TO_NAME' => 'Assigned User',
+    'LBL_MODIFIED' => 'Modified By',
+    'LBL_MODIFIED_NAME' => 'Modified By Name',
+    'LBL_DELETED' => 'Deleted',
+    'LBL_CREATED_USER' => 'Created by User',
+    'LBL_MODIFIED_USER' => 'Modified by User',
+    'LBL_LIST_NAME' => 'Name',
+    'LBL_EDIT_BUTTON' => 'Edit',
+    'LBL_REMOVE' => 'Remove',
+    'LBL_ASCENDING' => 'Ascending',
+    'LBL_DESCENDING' => 'Descending',
+    'LBL_OQ_QUALIFICATIONS_CASES_FROM_CASES_TITLE' => 'Cases',
+    'LBL_OQ_QUALIFICATIONS_ACCOUNTS_FROM_ACCOUNTS_TITLE' => 'Account',
+    'LBL_OQ_QUALIFICATIONS_ACCOUNTS_FROM_OQ_QUALIFICATIONS_TITLE' => 'Account',
+    'LBL_OQ_QUALIFICATIONS_ACCOUNTS_FROM_OQ_QUALIFICATIONS_TITLE_ID ' => 'Qualification ID',
+    'LBL_QUALIFICATIONS_CASES_SUBPANEL_TITLE' => 'Cases',
+);

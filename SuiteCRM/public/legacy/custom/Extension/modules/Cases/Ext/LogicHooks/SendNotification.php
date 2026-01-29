@@ -1,5 +1,8 @@
 <?php
-
+/*
+ * Logic hook to send notification on Case save
+ * removed as want to run via workflow instead
+ 
 $hook_array['after_save'][] = array(
     1,
     'Send Notification on Case Save',
@@ -7,3 +10,4 @@ $hook_array['after_save'][] = array(
     'CaseNotificationHook',
     'sendCaseNotification'
 );
+*/

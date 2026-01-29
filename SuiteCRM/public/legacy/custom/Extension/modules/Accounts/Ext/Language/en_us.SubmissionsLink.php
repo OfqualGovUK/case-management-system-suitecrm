@@ -1,0 +1,3 @@
+<?php
+
+$mod_strings['LBL_OQ_SOC_SUBMISSIONS_ACCOUNTS_FROM_OQ_SOC_SUBMISSIONS_TITLE'] = 'SOC Submissions';
