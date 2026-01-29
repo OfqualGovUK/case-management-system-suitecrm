@@ -3,3 +3,4 @@
 $mod_strings['LBL_OQ_QUALIFICATIONS_ACCOUNTS_FROM_OQ_QUALIFICATIONS_TITLE'] = 'Qualifications';
 $mod_strings['LBL_OQ_QUALIFICATIONS_ACCOUNTS_FROM_ACCOUNTS_TITLE'] = 'Qualifications';
 $mod_strings['LBL_OQ_QUALIFICATIONS_ACCOUNTS_FROM_OQ_QUALIFICATIONS_TITLE_ID'] = 'Qualification ID';
+$mod_strings['LBL_PANEL_CASE'] = 'Case Specific Details';
