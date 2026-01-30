@@ -12,8 +12,11 @@ WORKDIR /var/www/html
 ADD https://suitecrm.com/download/166/suite89/565627/suitecrm-$SUITEVERSION.zip  /var/www/html 
 RUN unzip suitecrm-$SUITEVERSION.zip && rm suitecrm-$SUITEVERSION.zip
 
-# Upgrade packages for security fixes
-RUN composer require tecnickcom/tcpdf:^6.8.0 --no-interaction --no-progress
+# Upgrade npm packages for security fixes
+RUN npm install @angular/common@19.2.16 @angular/core@19.2.16 @angular/platform-browser@19.2.16 @angular/platform-browser-dynamic@19.2.16 --no-save --legacy-peer-deps
+
+# Upgrade PHP packages for security fixes
+#RUN composer require tecnickcom/tcpdf:^6.8.0 --no-interaction --no-progress
 
 COPY --chown=www-data:www-data SuiteCRM/extensions/Ofqual /var/www/html/extensions/Ofqual/ 
 COPY --chown=www-data:www-data SuiteCRM/public/legacy/custom/. /var/www/html/public/legacy/custom
