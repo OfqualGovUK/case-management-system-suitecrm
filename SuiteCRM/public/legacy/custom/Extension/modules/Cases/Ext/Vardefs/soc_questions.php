@@ -213,10 +213,3 @@ $dictionary['Case']['fields']['question_multirow_responses'] = array(
     'vname' => 'LBL_QUESTION_RESPONSES',
 );
 
-$dictionary['Case']['fields']['oq_case_reviewers_user'] = array(
-    'name' => 'oq_case_reviewers_user',
-    'type' => 'link',
-    'relationship' => 'oq_case_reviewers_user',
-    'source' => 'non-db',
-    'vname' => 'LBL_OQ_CASE_REVIEWERS_USER',
-);
