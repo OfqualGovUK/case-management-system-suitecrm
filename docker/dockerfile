@@ -2,7 +2,7 @@ FROM serversideup/php:8.3-fpm-apache-debian
 
 USER root 
 ARG SUITEVERSION=8-9-1
-RUN apt-get update && apt-get install -y mariadb-client wget vim iputils-ping curl ca-certificates gnupg lsb-release \
+RUN apt-get update && apt-get install -y mariadb-client wget vim iputils-ping curl ca-certificates gnupg lsb-release nodejs npm \
     && curl -sL https://aka.ms/InstallAzureCLIDeb | bash \
     && rm -rf /var/lib/apt/lists/*
 RUN install-php-extensions gd zip mysqli opcache bcmath intl curl xml json mbstring pdo pdo_mysql openssl soap tokenizer zip imap ldap apcu
@@ -11,6 +11,13 @@ WORKDIR /var/www/html
 
 ADD https://suitecrm.com/download/166/suite89/565627/suitecrm-$SUITEVERSION.zip  /var/www/html 
 RUN unzip suitecrm-$SUITEVERSION.zip && rm suitecrm-$SUITEVERSION.zip
+
+# Upgrade npm packages for security fixes
+RUN npm install @angular/common@19.2.16 @angular/core@19.2.16 @angular/platform-browser@19.2.16 @angular/platform-browser-dynamic@19.2.16 --no-save --legacy-peer-deps
+
+# Upgrade PHP packages for security fixes
+#RUN composer require tecnickcom/tcpdf:^6.8.0 --no-interaction --no-progress
+
 COPY --chown=www-data:www-data SuiteCRM/extensions/Ofqual /var/www/html/extensions/Ofqual/ 
 COPY --chown=www-data:www-data SuiteCRM/public/legacy/custom/. /var/www/html/public/legacy/custom
 COPY --chown=www-data:www-data SuiteCRM/public/legacy/modules/. /var/www/html/public/legacy/modules
