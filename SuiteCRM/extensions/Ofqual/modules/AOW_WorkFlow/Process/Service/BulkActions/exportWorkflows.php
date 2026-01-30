@@ -24,7 +24,7 @@ use Psr\Log\LoggerInterface;
 
 use Symfony\Component\HttpFoundation\RequestStack;
 
-class ExportWorkflows extends LegacyHandler implements ProcessHandlerInterface, LoggerAwareInterface
+class exportWorkflows extends LegacyHandler implements ProcessHandlerInterface, LoggerAwareInterface
 {
     protected const MSG_OPTIONS_NOT_FOUND = 'Process options are not defined';
     protected const MSG_INVALID_TYPE = 'Invalid Type';
