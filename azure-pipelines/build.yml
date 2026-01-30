@@ -35,7 +35,6 @@ stages:
             monitorWhen: 'always'
             severityThreshold: 'high'
             failOnIssues: false
-            additionalArguments: '--file=composer.lock'
 
         - task: Docker@2
           displayName: Build Docker Image
