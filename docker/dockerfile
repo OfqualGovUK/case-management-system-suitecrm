@@ -2,7 +2,7 @@ FROM serversideup/php:8.3-fpm-apache-debian
 
 USER root 
 ARG SUITEVERSION=8-9-1
-RUN apt-get update && apt-get install -y mariadb-client wget vim iputils-ping curl ca-certificates gnupg lsb-release \
+RUN apt-get update && apt-get install -y mariadb-client wget vim iputils-ping curl ca-certificates gnupg lsb-release nodejs npm \
     && curl -sL https://aka.ms/InstallAzureCLIDeb | bash \
     && rm -rf /var/lib/apt/lists/*
 RUN install-php-extensions gd zip mysqli opcache bcmath intl curl xml json mbstring pdo pdo_mysql openssl soap tokenizer zip imap ldap apcu
